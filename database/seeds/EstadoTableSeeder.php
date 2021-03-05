@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use Faker\Factory as Faker;
+
 
 class EstadoTableSeeder extends Seeder
 {
@@ -24,7 +24,7 @@ class EstadoTableSeeder extends Seeder
 
         
 
-        $faker = Faker::create();
+        
         for ($i=1; $i <= 40; $i++) 
         {
             \DB::table('areas')->insert
@@ -36,7 +36,7 @@ class EstadoTableSeeder extends Seeder
             );
         }
 
-        $faker = Faker::create();
+       
         for ($i=1; $i <= 70; $i++) 
         {
             \DB::table('zonas')->insert
