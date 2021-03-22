@@ -19,7 +19,14 @@ class RoleTableSeeder extends Seeder
     public function run()
     {
 
-    	
-        
+    	 $admin = 				Role::create(['name'=>'ADMINISTRADOR']);
+         $usuario_mpio = 		Role::create(['name'=>'USUARIO GLOBAL MUNICIPAL']);
+
+    	 Permission::create(['name'=>'representantes.index','descripcion'=>'Consultar Representantes'])
+        ->syncRoles([$admin, $usuario_mpio]);
+        Permission::create(['name'=>'representantes.create','descripcion'=>'Agregar Representantes'])
+        ->syncRoles([$admin, $usuario_mpio]);
+         Permission::create(['name'=>'representantes.edit','descripcion'=>'Editar Representantes'])
+        ->syncRoles([$admin, $usuario_mpio]);
     }
 }

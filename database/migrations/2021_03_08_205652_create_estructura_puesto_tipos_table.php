@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateAreasTable extends Migration
+class CreateEstructuraPuestoTiposTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,9 @@ class CreateAreasTable extends Migration
      */
     public function up()
     {
-        Schema::create('areas', function (Blueprint $table) {
-            $table->increments('id');            
-            $table->string('descripcion',40)->index()->unique();             
+        Schema::create('estructura_puesto_tipos', function (Blueprint $table) {
+            $table->increments('id');
+            $table->string('tipo',40)->index();  
         });
     }
 
@@ -26,6 +26,6 @@ class CreateAreasTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('areas');
+        Schema::dropIfExists('estructura_puesto_tipos');
     }
 }

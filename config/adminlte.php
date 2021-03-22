@@ -236,150 +236,104 @@ return [
 
 
         [
-            'text' => 'Información Base',
-            'icon' => 'fas fa-database',
+            'text' => 'Estructura Territorial',
+            'icon' => 'fas fa-users-cog',
+            
             'submenu' => 
             [
                 [
-                    'text' => 'Municipio',
-                    'url'  => '/municipios',      
-                    'icon' => 'fas fa-map-marked-alt',          
-                    'can'  => 'base.municipios.index',
+                    'text' => 'Logros Estructura',
+                    'url'  => '/estructuras',
+                    'icon' => 'fas fa-calendar-check',
+                    //'can'  => 'estructuras.index',
+                    'classes'   => 'text-light text-left',
+                    'shift'    => 'ml-4',
                 ],
                 [
-                    'text' => 'Secciones',
-                    'url'  => '/secciones', 
-                    'icon' => 'fas fa-search-location',             
-                    'can'  => 'base.secciones.index',
-                ],
-                [
-                    'text' => 'Colonias y C.P.',
-                    'url'  => '/colonias',  
-                    'icon' => 'fas fa-map-marker-alt',
-                    'can'  => 'base.colonias.index',              
+                    'text' => 'Movilización',
+                    'url'  => '/estructuras',
+                    'icon' => 'fas fa-users',
+                    //'can'  => 'estructuras.index',
+                    'classes'   => 'text-light text-left',
+                    'shift'    => 'ml-4',
                 ],
             ],
         ],
-
 
         [
             'text' => 'Estructura Electoral',
             'icon' => 'fas fa-address-book',
+            
             'submenu' => 
             [
                 [
-                    'text' => 'Estructura',
-                    'url'  => '/estructuras',
-                    'icon' => 'fas fa-person-booth',
-                    'can'  => 'estructuras.index',
-                ],
-            ],
-        ],
-
-        [
-            'text' => 'Reportes',
-            'icon' => 'fas fa-print',
-            'submenu' => 
-            [
-                [
-                    'text' => 'Estructura Electoral',
-                    'url'  => '#',
-                    'icon' => 'fas fa-users',
-                    'can'  => 'reportes.estructura.electoral.index',
-                ],
-                [
-                    'text' => 'Convencidos',
-                    'url'  => '#',
-                    'icon' => 'fas fa-user-check',
-                    'can'  => 'reportes.estructura.convencidos.index',
-                ],
-                [
-                    'text' => 'Prospectos',
-                    'url'  => '#',
-                    'icon' => 'fas fa-user-cog',
-                    'can'  => 'reportes.estructura.prospectos.index',
-                ]  ,     
-                [
-                    'text' => 'Movilización',
-                    'url'  => '#',
-                    'icon' => 'fas fa-paste',                    
-                    'can'  => 'reportes.movilizacion.index',
-                ]  ,
-
-                [
-                    'text' => 'Conteo Rápido',
-                    'url'  => '#',
-                    'icon' => 'fas fa-poll',
-                    'can'  => 'reportes.conteorapido.index',
-                ]  ,
-
-                 [
-                    'text' => 'Estadisticas por usuario',
-                    'url'  => '#',
-                    'icon' => 'fas fa-table',
-                    'can'  => 'reportes.estadisticas.index',
-                ], 
-                 [
-                    'text' => 'Bingo',
-                    'url'  => '#',
-                    'icon' => 'fas fa-file-signature',
-                    'can'  => 'reportes.bingo.index',
-                ],  
-            ],
-        ],
-
-        [
-            'text' => 'Centro de Llamadas',
-            'icon' => "fas fa-phone-volume",
-            'submenu' => 
-            [
-                [
-                    'text' => 'Validación',
-                    'url'  => '#',
-                    'icon' => 'fas fa-traffic-light',
-                    'can'  => 'validacion.validar.index',
-                ],                                
-                   
-            ],
-        ],
-
-        [
-            'text' => 'Bingo',
-            'icon' => "fas fa-clipboard-list",
-            'submenu' => 
-            [
-                [
-                    'text' => 'Día "D"',
-                    'url'  => '#',
-                    'icon' => 'fas fa-keyboard',
-                    'can'  => 'bingo.diad.index',
-                ],
-                [
-                    'text' => 'Movilización',
-                    'url'  => '#',
-                    'icon' => 'fas fa-people-arrows',
-                    'can'  => 'bingo.movilizacion.index',
-                ],
-                [
-                    'text' => 'Resultados',
-                    'url'  => '#',
-                    'icon' => 'fas fa-file-signature',
-                    'can'  => 'bingo.resultados.index',
+                    'text' => 'Representantes',
+                    'url'  => '/representantes',
+                    'icon' => 'fas fa-user-tie',
+                    //'can'  => 'estructuras.index',
+                    'classes'   => 'text-light text-left',
+                    'shift'    => 'ml-4',
                 ],                
             ],
         ],
 
-        [
-            'text' => 'Conteo Rapido',
-            'icon' => "fas fa-box-open",
+
+        
+       [
+            'text' => 'Reportes',
+            'icon' => 'fas fa-print',
             'submenu' => 
             [
+
                 [
-                    'text' => 'Captura de Resultados',
+                    'text' => 'Estructura Electoral',
                     'url'  => '#',
-                    'icon' => 'fas fa-people-carry',
-                    'can'  => 'conteo.captura.index',
-                ],      
+                    'icon' => 'fas fa-file-alt',
+                    //'can'  => 'reportes.estructura.electoral.index',
+                    'classes'   => 'text-light text-left',
+                    'shift'    => 'ml-3',
+
+                    'submenu' => 
+                    [
+                        [
+                            'text' => 'Logros Estructura',
+                            'url'  => '/estructuras',
+                            'icon' => 'fas fa-calendar-check',
+                            //'can'  => 'estructuras.index',
+                            'classes'   => 'text-light text-left',
+                            'shift'    => 'ml-4',
+                        ],                
+                        [
+                            'text' => 'Movilización',
+                            'url'  => '/estructuras',
+                            'icon' => 'fas fa-walking',
+                            //'can'  => 'estructuras.index',
+                            'classes'   => 'text-light text-left',
+                            'shift'    => 'ml-4',
+                        ], 
+                    ],
+                ],
+                
+                [
+                    'text' => 'Representantes',
+                    'url'  => '#',
+                    'icon' => 'fas fa-people-arrows',
+                    //'can'  => 'reportes.estructura.convencidos.index',
+                    'classes'   => 'text-light text-left',
+                    'shift'    => 'ml-3',
+
+                    'submenu' => 
+                    [
+                        [
+                            'text' => 'Logros Representantes',
+                            'url'  => '/estructuras',
+                            'icon' => 'fas fa-chalkboard-teacher',
+                            //'can'  => 'estructuras.index',
+                            'classes'   => 'text-light text-left',
+                            'shift'    => 'ml-4',
+                        ],                                       
+                    ],
+                ],         
             ],
         ],
 
@@ -391,7 +345,7 @@ return [
             'text' => 'Cambiar Contraseña',
             'url'  => '#',
             'icon' => 'fas fa-fw fa-lock',
-            'can'  => 'configuracion.password.edit'
+            //'can'  => 'configuracion.password.edit'
         ], 
         */
     ],

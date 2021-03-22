@@ -15,7 +15,7 @@ class CreateSeccionesTable extends Migration
     {
         Schema::create('secciones', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('municipio_cat_clave')->unsigned()->index();  
+            $table->integer('municipio_clave')->unsigned()->index();  
             $table->integer('estado_cat_clave')->unsigned();      
             $table->integer('seccione_tipo_id')->unsigned()->nullable();  
             $table->string('clave',6)->index()->unique()->nullable();  

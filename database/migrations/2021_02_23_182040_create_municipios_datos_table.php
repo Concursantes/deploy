@@ -16,11 +16,10 @@ class CreateMunicipiosDatosTable extends Migration
         Schema::create('municipios_datos', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('municipio_clave')->unsigned()->index()->unique();
+            $table->string('municipio_nombre',60)->nullable();
             $table->string('opera_sistema',2)->index();
-            $table->integer('seccion_inicio')->unsigned()->nullable();
-            $table->integer('seccion_fin')->unsigned()->nullable();
-            $table->string('usuario',50)->index()->unique();            
-            $table->string('password');
+            $table->integer('seccion_inicio')->unsigned();
+            $table->integer('seccion_fin')->unsigned();         
             $table->string('apepat',60)->index();
             $table->string('apemat',60)->nullable()->index();
             $table->string('nombre',80)->index();

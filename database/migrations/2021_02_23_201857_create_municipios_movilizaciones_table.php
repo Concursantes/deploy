@@ -14,12 +14,11 @@ class CreateMunicipiosMovilizacionesTable extends Migration
     public function up()
     {
         Schema::create('municipios_movilizaciones', function (Blueprint $table) {
-            $table->id();
-            $table->integer('municipio_clave')->unsigned()->index()->unique();            
-            $table->integer('seccione_id')->unsigned()->nullable();          
-            $table->integer('comites_movilizados')->unsigned();          
-            $table->integer('vocales_confirmados')->unsigned();          
-            $table->integer('comites_completos_movilizados')->unsigned();                      
+            $table->increments('id');
+            $table->integer('municipio_clave')->unsigned()->index();                              
+            $table->integer('movimientos')->unsigned();          
+            $table->integer('contabilizados')->unsigned();          
+            $table->integer('movimientos_completos')->unsigned();                      
             $table->integer('usuario_id')->unsigned()->nullable();                
             $table->timestamps();
         });

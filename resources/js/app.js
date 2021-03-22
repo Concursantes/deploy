@@ -1,12 +1,12 @@
 require('./bootstrap');
-require('./datatables.net')();
-require('./datatables.net-bs4')();
+//require('./datatables.net')();
+//require('./datatables.net-bs4')();
 require( 'jquery' );
 
-import dt from 'datatables.net-dt';
+//import dt from 'datatables.net-dt';
 
 var $  = require( 'jquery' );
-var dt = require( 'datatables.net' )();
+//var dt = require( 'datatables.net' )();
 
 
 //require('./datatables.net-dt' )();
